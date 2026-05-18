@@ -1,0 +1,66 @@
+{
+  "name": "kdp-cover-math",
+  "version": "0.1.0",
+  "description": "Pure-function Amazon KDP paperback cover-wrap and interior-page geometry. Trim sizes, bleed, spine width, full cover-wrap dimensions.",
+  "keywords": [
+    "kdp",
+    "amazon",
+    "kindle-direct-publishing",
+    "self-publishing",
+    "print-on-demand",
+    "book",
+    "cover",
+    "spine",
+    "trim",
+    "bleed",
+    "barcode",
+    "paperback"
+  ],
+  "license": "MIT",
+  "author": "alanherron",
+  "homepage": "https://github.com/alanherron/kdp-cover-math#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanherron/kdp-cover-math.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanherron/kdp-cover-math/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
