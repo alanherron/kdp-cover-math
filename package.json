@@ -1,6 +1,6 @@
 {
-  "name": "kdp-cover-math",
-  "version": "0.1.0",
+  "name": "@alankherron/kdp-cover-geometry",
+  "version": "0.1.1",
   "description": "Pure-function Amazon KDP paperback cover-wrap and interior-page geometry. Trim sizes, bleed, spine width, full cover-wrap dimensions.",
   "keywords": [
     "kdp",
@@ -61,6 +61,7 @@
     "node": ">=18"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
