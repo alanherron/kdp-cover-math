@@ -1,6 +1,6 @@
 {
   "name": "@alankherron/kdp-cover-geometry",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Pure-function Amazon KDP paperback cover-wrap and interior-page geometry. Trim sizes, bleed, spine width, full cover-wrap dimensions.",
   "keywords": [
     "kdp",

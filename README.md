@@ -1,11 +1,11 @@
-# kdp-cover-math
+# @alankherron/kdp-cover-geometry
 
 Pure-function Amazon KDP paperback **cover-wrap** and **interior-page** geometry. Returns the inch dimensions you need to lay out a print-ready cover or interior — trim, bleed, spine width, full wrap dimensions, safe areas, barcode box.
 
 Zero dependencies. ESM + CJS + types. Works in Node, the browser, edge runtimes, and any TypeScript project.
 
 ```
-npm i kdp-cover-math
+npm i @alankherron/kdp-cover-geometry
 ```
 
 ## Why this exists
@@ -23,7 +23,7 @@ import {
   spineWidthInches,
   spineSupportsText,
   TRIM_SIZES,
-} from "kdp-cover-math";
+} from "@alankherron/kdp-cover-geometry";
 
 // Full cover wrap for a 40-page, 8.5"x11", white-paper paperback.
 const cover = coverDimensions("8.5x11", 40, "white");

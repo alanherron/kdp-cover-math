@@ -18,6 +18,7 @@ describe("getTrim", () => {
     expect(getTrim("8x10")).toMatchObject({ widthIn: 8, heightIn: 10 });
     expect(getTrim("9.5x9.5")).toMatchObject({ widthIn: 9.5, heightIn: 9.5 });
     expect(getTrim("8.5x8.5")).toMatchObject({ widthIn: 8.5, heightIn: 8.5 });
+    expect(getTrim("5.5x8.5")).toMatchObject({ widthIn: 5.5, heightIn: 8.5 });
   });
 
   it("throws on an unknown trim id", () => {

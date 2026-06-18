@@ -13,8 +13,8 @@
  * - Barcode safe box: 2.0 × 1.2 in on back cover.
  */
 
-/** One of the four trim sizes KDP offers and we render math for. */
-export type TrimSizeId = "8.5x11" | "8x10" | "9.5x9.5" | "8.5x8.5";
+/** One of the trim sizes KDP offers and we render math for. */
+export type TrimSizeId = "8.5x11" | "8x10" | "9.5x9.5" | "8.5x8.5" | "5.5x8.5";
 
 /** Paper stock — affects spine thickness math. */
 export type PaperType = "white" | "cream";
@@ -58,6 +58,13 @@ export const TRIM_SIZES: readonly TrimDimensions[] = [
     widthIn: 8.5,
     heightIn: 8.5,
     description: "Classic square — friendly for kids' books.",
+  },
+  {
+    id: "5.5x8.5",
+    label: '5.5" × 8.5"',
+    widthIn: 5.5,
+    heightIn: 8.5,
+    description: "Half-letter pocket size — compact, gift-able coil pads.",
   },
 ];
 
