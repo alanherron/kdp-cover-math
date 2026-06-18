@@ -32,15 +32,9 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
-      - name: Generate changelog
-        id: changelog
-        uses: changelogithub/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          body: ${{ steps.changelog.outputs.changelog }}
+          generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}
