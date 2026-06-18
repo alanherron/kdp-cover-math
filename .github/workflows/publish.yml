@@ -18,20 +18,24 @@ jobs:
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-      
+
+      # Trusted Publishing (OIDC) needs npm >= 11.5.1.
+      - run: npm install -g npm@latest
+
       - run: npm ci
-      
+
       - run: npm run typecheck
-      
+
       - run: npm run test
-      
+
       - run: npm run build
-      
+
+      # No NODE_AUTH_TOKEN: authentication is via GitHub OIDC (Trusted
+      # Publishing), configured on npmjs.com for this package. Provenance is
+      # generated automatically.
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
